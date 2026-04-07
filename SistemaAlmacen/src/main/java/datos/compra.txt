@@ -1,0 +1,23 @@
+Factura nro: 80, Fecha: 2025-10-30T09:12:26.037319900, Cliente: Gonzalo, Productos: {Gaseosa: gaseosa Marca: Coca-Cola Litros: 1.5 Precio: 150.0 Stock: 50 Vence: Wed Dec 31 00:00:00 GMT-03:00 2025=1}, Total: 150.0, Medio de pago: Transferencia
+Factura nro: F001, Fecha: 2025-10-30T21:52:27.573675, Cliente: Gonzalo, Productos: {Carne;2000.0;1761871938392;10;carnita;refinada;20.0=1, Gaseosa;500.0;1761871944996;15;Marca Z;1.5=4, Queso;1500.0;1761871940911;20;Marca Y;Mozzarella=2}, Total: 7000.0, Medio de pago: Tarjeta
+Factura nro: F003, Fecha: 2025-10-30T22:52:18.751752100, Cliente: Gonzalo, Productos: {Carne;2000.0;1761875532551;10;carnita;refinada;20.0=1, Gaseosa;500.0;1761875536037;15;Marca Z;1.5=1, Queso;1500.0;1761875534509;20;Marca Y;Mozzarella=1}, Total: 4000.0, Medio de pago: Tarjeta
+Factura nro: F004, Fecha: 2025-10-30T23:08:15.718505800, Cliente: Gonzalo, Productos: {Queso;1500.0;1761876493404;20;Marca Y;Mozzarella=1}, Total: 1500.0, Medio de pago: Tarjeta
+Factura nro: F005, Fecha: 2025-10-30T23:17:56.819989100, Cliente: Gonzalo, Productos: {Carne;2000.0;1761877071666;10;carnita;refinada;20.0=1, Gaseosa;500.0;1761877074835;15;Marca Z;1.5=1, Queso;1500.0;1761877073484;20;Marca Y;Mozzarella=1}, Total: 4000.0, Medio de pago: Tarjeta
+Factura nro: F006, Fecha: 2025-10-30T23:26:55.323130, Cliente: Gonzalo, Productos: {gaseosa;120.0;1761866730494;18;Pepsi;10.0=2, carneVaca;50.0;1731639600000;9;Coto;vaca;10.0=1, queso;500.0;1763175600000;9;La Paulina;Pategras=1}, Total: 790.0, Medio de pago: Tarjeta
+Factura nro: F007, Fecha: 2025-10-31T19:59:50.248891100, Cliente: Gonzalo, Productos: {gaseosa;120.0;1761866730494;19;Pepsi;10.0=1}, Total: 120.0, Medio de pago: Tarjeta
+Factura nro: F008, Fecha: 2025-10-31T20:07:23.833487200, Cliente: Gonzalo, Productos: {queso;500.0;1763175600000;9;La Paulina;Pategras=1}, Total: 500.0, Medio de pago: Tarjeta
+Factura nro: F009, Fecha: 2025-10-31T20:23:24.305631, Cliente: Gonzalo, Productos: {queso;500.0;1763175600000;9;La Paulina;Pategras=1}, Total: 500.0, Medio de pago: Tarjeta
+Factura nro: F010, Fecha: 2025-10-31T20:27:17.689483800, Cliente: Gonzalo, Productos: {queso;500.0;1763175600000;9;La Paulina;Pategras=1}, Total: 500.0, Medio de pago: Tarjeta
+Factura nro: F011, Fecha: 2025-10-31T20:42:56.510173700, Cliente: Gonzalo, Productos: {gaseosa;120.0;1761866730494;19;Pepsi;10.0=1}, Total: 120.0, Medio de pago: Tarjeta
+Factura nro: F012, Fecha: 2025-10-31T20:47:08.459358500, Cliente: Gonzalo, Productos: {gaseosa;120.0;1761866730494;19;Pepsi;10.0=1}, Total: 120.0, Medio de pago: Tarjeta
+Factura nro: F013, Fecha: 2025-11-26T08:46:39.305494300, Cliente: Gonzalo, Productos: {7;queso;800.0;1764082983350;14;Lapaulina;Lapaulina=1}, Total: 800.0, Medio de pago: Tarjeta
+Factura nro: F014, Fecha: 2025-11-26T08:48:37.151216200, Cliente: Ian, Productos: {7;queso;800.0;1764082983350;14;Lapaulina;Lapaulina=1}, Total: 800.0, Medio de pago: Tarjeta
+Factura nro: F015, Fecha: 2025-11-26T08:49:26.496491, Cliente: Ian, Productos: {7;queso;800.0;1764082983350;14;Lapaulina;Lapaulina=1}, Total: 800.0, Medio de pago: Tarjeta
+Factura nro: F016, Fecha: 2025-11-26T08:50:33.192264200, Cliente: Ian, Productos: {7;queso;800.0;1764082983350;14;Lapaulina;Lapaulina=1}, Total: 800.0, Medio de pago: Tarjeta
+Factura nro: F017, Fecha: 2025-11-26T08:52:18.308005, Cliente: Gonzalo, Productos: {7;queso;800.0;1764082983350;14;Lapaulina;Lapaulina=1}, Total: 800.0, Medio de pago: Tarjeta
+Factura nro: F018, Fecha: 2025-11-26T08:53:36.308327300, Cliente: Ian, Productos: {5;queso;800.0;1764082983350;14;Lapaulina;Lapaulina=1}, Total: 800.0, Medio de pago: Tarjeta
+Factura nro: F019, Fecha: 2025-11-26T08:55:04.022457600, Cliente: Ian, Productos: {5;queso;800.0;1764082983350;14;Lapaulina;Lapaulina=1}, Total: 800.0, Medio de pago: Tarjeta
+Factura nro: F020, Fecha: 2025-11-26T08:59:03.091517500, Cliente: Ian, Productos: {5;queso;800.0;1764082983350;14;Lapaulina;Lapaulina=1}, Total: 800.0, Medio de pago: Tarjeta
+Factura nro: F021, Fecha: 2025-11-26T09:01:38.991851900, Cliente: Ian, Productos: {3;Gaseosa;12.0;1764158444589;9;Pepsi;2.0=1}, Total: 12.0, Medio de pago: Tarjeta
+Factura nro: F022, Fecha: 2025-11-26T09:02:29.097222900, Cliente: Ian, Productos: {3;Gaseosa;12.0;1764158444589;9;Pepsi;2.0=1}, Total: 12.0, Medio de pago: Tarjeta
+Factura nro: F023, Fecha: 2025-11-26T09:12:57.777404300, Cliente: Ian, Productos: {3;Gaseosa;12.0;1764158444589;9;Pepsi;2.0=1}, Total: 12.0, Medio de pago: Tarjeta

@@ -1,0 +1,6 @@
+Gonzalo;25;gcalveira@uade.edu.ar;12345678
+Ian;20;iozafran@uade.edu.ar;33333
+Carlos;20;clopez@sistemaalmacen.com;12345
+pipo;22;pipo@uade.edu.ar;00000
+a;15;a;1
+Ian;20;ianozafran@gmail.com;87654321
