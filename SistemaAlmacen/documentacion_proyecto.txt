@@ -1,0 +1,232 @@
+DOCUMENTACIÓN DEL PROYECTO: SISTEMAALMACEN APP
+
+Fecha de creación: 7 de abril de 2026
+
+1. INTRODUCCIÓN
+================
+El proyecto SistemaAlmacen App es una aplicación de escritorio desarrollada en Java que implementa un sistema de gestión para un almacén. Permite gestionar usuarios (clientes y empleados), productos, compras y facturación. La aplicación utiliza una interfaz gráfica basada en Swing y sigue el patrón de diseño Modelo-Vista-Controlador (MVC).
+
+2. TECNOLOGÍAS UTILIZADAS
+=========================
+- Lenguaje: Java (versión 24)
+- Herramienta de construcción: Maven
+- Interfaz gráfica: Swing (formularios .form generados con IntelliJ IDEA)
+- Librerías: Jakarta Mail (para envío de correos electrónicos)
+- Persistencia: Archivos de texto plano (compra.txt, productos.txt, usuarios.txt)
+
+3. ARQUITECTURA DEL SISTEMA
+===========================
+La aplicación sigue el patrón MVC (Modelo-Vista-Controlador):
+
+- **Modelo**: Contiene la lógica de negocio y las entidades del dominio.
+  - Clases de entidades: Usuario, Producto, Factura, etc.
+  - Gestores: GestorUsuario, GestorProductos, GestorCompras
+  - Interfaces: Para desacoplar las implementaciones
+
+- **Vista**: Maneja la interfaz de usuario.
+  - Formularios Swing: FormularioInicioSesionUsuario, FormularioCarrito, etc.
+
+- **Controlador**: Coordina entre modelo y vista.
+  - ControladorSistemaAlmacen: Gestiona las interacciones
+
+- **Servicio**: Funcionalidades adicionales.
+  - EnviadorEmail: Para envío de correos
+
+4. ESTRUCTURA DE ARCHIVOS
+========================
+El proyecto está organizado de la siguiente manera:
+
+- pom.xml: Archivo de configuración de Maven
+- src/
+  - MainFormulario.java: Punto de entrada principal
+  - main/java/
+    - controlador/
+      - ControladorSistemaAlmacen.java
+    - datos/
+      - compra.txt: Archivo de compras
+      - productos.txt: Archivo de productos
+      - usuarios.txt: Archivo de usuarios
+    - modelo/
+      - Entidades: Carne.java, Cliente.java, Empleado.java, Factura.java, etc.
+      - Gestores: GestorCompras.java, GestorProductos.java, GestorUsuario.java
+      - ManejoDeArchivos.java: Utilidades para archivos
+      - Interface/: Interfaces para gestores y sistema
+      - testeo/: Clases de prueba unitaria
+    - servicio/
+      - EnviadorEmail.java: Servicio de envío de correos
+    - vista/
+      - Formularios Swing: FormularioInicio.java, FormularioCarrito.java, etc.
+  - resources/: Recursos adicionales
+- target/: Archivos compilados generados por Maven
+
+5. CLASES PRINCIPALES
+=====================
+- **SistemaAlmacen**: Clase principal que implementa ISistemaAlmacen, coordina los gestores
+- **GestorUsuario**: Maneja usuarios (clientes y empleados)
+- **GestorProductos**: Gestiona el inventario de productos
+- **GestorCompras**: Administra las compras y el carrito
+- **ManejoDeArchivos**: Utilidades para leer/escribir archivos
+- **FormularioInicioSesionUsuario**: Formulario de login inicial
+- **ControladorSistemaAlmacen**: Controlador principal
+
+Entidades principales:
+- Usuario (Cliente, Empleado)
+- Producto (Carne, Queso, Gaseosa)
+- CarritoDeCompra
+- Factura
+- MediosDePago (Tarjeta, Transferencia)
+
+6. FUNCIONALIDADES PRINCIPALES
+==============================
+- Registro e inicio de sesión de usuarios
+- Gestión de productos (agregar, editar, eliminar)
+- Carrito de compras
+- Procesamiento de pagos (tarjeta, transferencia)
+- Generación de facturas
+- Envío de correos electrónicos
+- Menús diferenciados para empleados y clientes
+
+7. CÓMO EJECUTAR EL PROYECTO
+============================
+Requisitos previos:
+- JDK 24 instalado
+- Maven instalado
+
+Pasos:
+1. Clonar o descargar el proyecto
+2. Navegar al directorio raíz del proyecto
+3. Ejecutar: mvn clean compile
+4. Ejecutar: mvn exec:java -Dexec.mainClass="MainFormulario"
+
+O desde IDE: Ejecutar MainFormulario.java
+
+8. DEPENDENCIAS
+===============
+- Jakarta Mail 1.6.7: Para funcionalidades de correo electrónico
+
+9. ARCHIVOS DE DATOS
+====================
+Los datos se persisten en archivos de texto en src/main/java/datos/:
+- usuarios.txt: Información de usuarios
+- productos.txt: Inventario de productos
+- compra.txt: Registro de compras
+
+10. PRUEBAS
+===========
+El proyecto incluye clases de testeo en modelo/testeo/:
+- TesteoCarritoCompras.java
+- TesteoCliente.java
+- TesteoFactura.java
+- Etc.
+
+Para ejecutar pruebas: mvn test
+
+11. NOTAS ADICIONALES
+=====================
+- La aplicación utiliza archivos de texto para persistencia, lo que es simple pero no escalable para producción
+- Los formularios están diseñados con IntelliJ IDEA GUI Designer
+- El sistema soporta diferentes tipos de productos y medios de pago
+- Implementa envío de emails para confirmaciones
+
+12. FUNCIONALIDADES DETALLADAS DE LAS CLASES
+============================================
+
+**Modelo (Entidades y Lógica de Negocio):**
+
+- **Usuario**: Clase base abstracta que representa un usuario del sistema. Atributos: nombre, edad, correo electrónico, contraseña. Métodos: getters y setters.
+
+- **Cliente**: Extiende Usuario. Representa a un cliente. Métodos adicionales: ninguno específico, hereda de Usuario.
+
+- **Empleado**: Extiende Usuario. Representa a un empleado. Métodos adicionales: ninguno específico, hereda de Usuario.
+
+- **Producto**: Clase base abstracta para productos. Atributos: id, nombre, precio, stock, fecha de vencimiento. Métodos: getters, setters, toString().
+
+- **Carne**: Extiende Producto. Producto específico de carne. Atributos adicionales: tipo de carne.
+
+- **Queso**: Extiende Producto. Producto específico de queso. Atributos adicionales: tipo de queso.
+
+- **Gaseosa**: Extiende Producto. Producto específico de gaseosa. Atributos adicionales: marca, tamaño.
+
+- **CarritoDeCompra**: Representa el carrito de compras de un cliente. Atributos: cliente, mapa de productos con cantidades. Métodos: agregar producto, calcular total, vaciar carrito.
+
+- **Factura**: Representa una factura de compra. Atributos: número de factura, carrito, fecha, total. Métodos: getters, setters, toString().
+
+- **MediosDePago**: Clase base abstracta para medios de pago. Atributos: tipo. Métodos: procesar pago (abstracto).
+
+- **Tarjeta**: Extiende MediosDePago. Pago con tarjeta. Atributos: número de tarjeta, fecha de vencimiento, CVV.
+
+- **Transferencia**: Extiende MediosDePago. Pago por transferencia. Atributos: CBU, alias.
+
+- **GestorUsuario**: Implementa IGestorUsuario. Gestiona usuarios. Métodos: buscar por email/contraseña, registrar usuario, validar correo/contraseña, agregar a lista, iniciar sesión, buscar cliente por correo.
+
+- **GestorProductos**: Implementa IGestorProductos. Gestiona productos. Métodos: agregar producto, actualizar stock, cargar desde archivo, buscar por ID, listar productos, verificar stock.
+
+- **GestorCompras**: Implementa IGestorCompras. Gestiona compras. Métodos: guardar compras, agregar factura, actualizar stock de productos, calcular total de facturas.
+
+- **ManejoDeArchivos**: Implementa IManejoDeArchivos. Utilidades para archivos. Métodos: leer archivo, escribir en archivo, actualizar línea de producto, leer líneas.
+
+- **SistemaAlmacen**: Implementa ISistemaAlmacen. Clase principal del modelo. Coordina gestores. Métodos: getters para gestores.
+
+**Interfaces (Modelo):**
+
+- **ISistemaAlmacen**: Define métodos para acceder a gestores.
+
+- **IGestorUsuario**: Define métodos para gestión de usuarios.
+
+- **IGestorProductos**: Define métodos para gestión de productos.
+
+- **IGestorCompras**: Define métodos para gestión de compras.
+
+- **IManejoDeArchivos**: Define métodos para manejo de archivos.
+
+- **ICarritoDeCompra**: Define métodos para carrito de compras.
+
+- **IFactura**: Define métodos para factura.
+
+**Vista (Interfaz de Usuario):**
+
+- **FormularioInicioSesionUsuario**: Formulario de inicio de sesión. Campos: correo, contraseña. Botones: iniciar sesión, registrar.
+
+- **FormularioRegistroUsuario**: Formulario de registro. Campos: nombre, edad, correo, contraseña. Botón: registrar.
+
+- **FormularioInicio**: Panel principal. Muestra menú según tipo de usuario (cliente/empleado).
+
+- **FormularioCarrito**: Muestra el carrito de compras. Lista productos, total, botones: agregar producto, eliminar, proceder al pago.
+
+- **FormularioTarjeta**: Formulario para pago con tarjeta. Campos: número, vencimiento, CVV.
+
+- **FormularioTransferencia**: Formulario para pago por transferencia. Campos: CBU, alias.
+
+- **FormularioVerMenuEmpleado**: Menú para empleados. Opciones: gestionar productos, ver compras, etc.
+
+- **FormularioAyuda**: Formulario de ayuda. Muestra información del sistema.
+
+**Controlador:**
+
+- **ControladorSistemaAlmacen**: Coordina modelo y vista. Métodos: iniciar sesión, obtener usuario actual, abrir panel principal, gestionar carrito, procesar pagos, enviar facturas.
+
+**Servicio:**
+
+- **EnviadorEmail**: Envía correos electrónicos. Método: enviarFactura (envía factura por email usando SMTP de Gmail).
+
+**Punto de Entrada:**
+
+- **MainFormulario**: Clase main. Inicia la aplicación mostrando el formulario de login.
+
+**Clases de Testeo (modelo/testeo/):**
+
+- **TesteoCarritoCompras**: Pruebas unitarias para CarritoDeCompra.
+
+- **TesteoCliente**: Pruebas para Cliente.
+
+- **TesteoFactura**: Pruebas para Factura.
+
+- **TesteoGestorCompras**: Pruebas para GestorCompras.
+
+- **TesteoGestorProductos**: Pruebas para GestorProductos.
+
+- **TesteoGestorUsuario**: Pruebas para GestorUsuario.
+
+- **TesteoSistemaAlmacen**: Pruebas para SistemaAlmacen.
+
+Esta documentación proporciona una visión general completa del proyecto.
