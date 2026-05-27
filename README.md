@@ -31,11 +31,24 @@ A lo largo de los proyectos incluidos se trabajan tecnologías como:
 Sistema académico desarrollado como proyecto de 3er año.
 
 Incluye:
+
 - Backend estructurado en capas
 - Gestión de estudiantes, profesores y calificaciones
 - Arquitectura organizada por servicios
 - Integración de múltiples tecnologías de persistencia
 - Documentación técnica incluida
+
+### 🏪 SistemaAlmacen App
+Sistema de gestión de almacén desarrollado en Java como proyecto universitario.
+
+Incluye:
+
+- Aplicación desktop desarrollada con Java Swing
+- Arquitectura MVC (Modelo - Vista - Controlador)
+- Gestión de productos, usuarios, compras y facturación
+- Persistencia de datos mediante archivos de texto
+- Implementación de carrito de compras y medios de pago
+- Testing de lógica de negocio y documentación técnica incluida
 
 ---
 
