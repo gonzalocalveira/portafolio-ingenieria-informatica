@@ -32,32 +32,32 @@ Sistema académico desarrollado como proyecto de 3er año.
 
 Incluye:
 
-- Backend estructurado en capas
-- Gestión de estudiantes, profesores y calificaciones
-- Arquitectura organizada por servicios
-- Integración de múltiples tecnologías de persistencia
-- Documentación técnica incluida
+- Backend estructurado en capas.
+- Gestión de estudiantes, profesores y calificaciones.
+- Arquitectura organizada por servicios.
+- Integración de múltiples tecnologías de persistencia.
+- Documentación técnica incluida.
 
 ### 🏪 SistemaAlmacen App
 Sistema de gestión de almacén desarrollado en Java como proyecto universitario.
 
 Incluye:
 
-- Aplicación desktop desarrollada con Java Swing
+- Aplicación desktop desarrollada con Java Swing.
 - Arquitectura MVC (Modelo - Vista - Controlador)
-- Gestión de productos, usuarios, compras y facturación
-- Persistencia de datos mediante archivos de texto
-- Implementación de carrito de compras y medios de pago
-- Testing de lógica de negocio y documentación técnica incluida
+- Gestión de productos, usuarios, compras y facturación.
+- Persistencia de datos mediante archivos de texto.
+- Implementación de carrito de compras y medios de pago.
+- Testing de lógica de negocio y documentación técnica incluida.
 
 ---
 
 ## 🎯 Objetivo del repositorio
 
-- Consolidar conocimientos adquiridos durante la carrera.
-- Aplicar conceptos de bases de datos relacionales y NoSQL.
-- Implementar arquitecturas mantenibles y escalables.
-- Documentar decisiones técnicas y modelado de datos.
+- Centralizar proyectos académicos y personales desarrollados durante la carrera.
+- Aplicar conceptos de desarrollo backend, bases de datos y arquitectura de software.
+- Diseñar soluciones mantenibles utilizando buenas prácticas y patrones de diseño.
+- Documentar implementaciones técnicas y decisiones de desarrollo.
 
 
 
